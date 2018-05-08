@@ -6,13 +6,7 @@ import 'sanitize.css';
 
 const Layout = ({ children, data }) => (
   <main>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
+    <Helmet title={data.site.siteMetadata.title} />
     {children()}
   </main>
 )

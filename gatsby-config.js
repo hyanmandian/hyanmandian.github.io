@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Hyan Mandian',
+    author: 'Hyan Mandian',
+    description: 'A simple tool to help me share things I know.',
   },
   plugins: ['gatsby-plugin-react-helmet'],
 }

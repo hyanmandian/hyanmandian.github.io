@@ -1,9 +1,9 @@
 import React from 'react';
 
+import Container from '../components/Container';
+
 const About = () => (
-  <div>
-    <h1>Who am I?</h1>
-  </div>
+  <Container title="Who am I?" />
 );
 
 export default About;

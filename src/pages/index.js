@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Container from '../components/Container';
+
 const Home = () => (
-  <div>
+  <Container>
     <h1>Under construction</h1>
-  </div>
+  </Container>
 );
 
 export default Home;

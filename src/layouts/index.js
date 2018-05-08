@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import { ThemeProvider } from 'styled-components';
 
-import 'sanitize.css';
+import { theme } from './styles';
 
 const Layout = ({ children, data }) => (
   <main>
     <Helmet title={data.site.siteMetadata.title} />
-    {children()}
+    <ThemeProvider theme={theme}>
+      {children()}
+    </ThemeProvider>
   </main>
 )
 

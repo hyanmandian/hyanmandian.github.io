@@ -5,7 +5,9 @@ import { Wrapper, Title } from './styles';
 const Container = ({ title, children }) => (
   <Wrapper>
     <If condition={title} render={() => (
-      <Title>{title}</Title>
+      <header>
+        <Title>{title}</Title>
+      </header>
     )} />
     {children}
   </Wrapper>

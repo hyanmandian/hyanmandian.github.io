@@ -5,17 +5,16 @@ export const theme = {
   color: {
     codGray: '#1e1e1e',
     anakiwa: '#9cdcfe',
-    danube: '#5192c8',
     akaroa: '#d3d3a3',
   },
   font: {
-    family: `'Merriweather', serif`,
+    family: `'Lato', sans-serif`,
 
-    tiny: '0.75em',
-    small: '0.85em',
-    base: '1em',
-    medium: '1.125em',
-    large: '1.5em',
+    tiny: '0.75rem',
+    small: '0.85rem',
+    base: '1rem',
+    medium: '1.125rem',
+    large: '1.5rem',
 
     light: '300',
     normal: '400',
@@ -27,6 +26,6 @@ injectGlobal`
   body {
     background: ${theme.color.codGray};
     color: ${theme.color.anakiwa};
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: ${theme.font.family};
   }
 `;

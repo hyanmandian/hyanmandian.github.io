@@ -3,9 +3,7 @@ import React from 'react';
 import Container from '../components/Container';
 
 const Home = () => (
-  <Container>
-    <h1>Under construction</h1>
-  </Container>
+  <Container title="Under construction" />
 );
 
 export default Home;

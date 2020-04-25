@@ -1,20 +1,21 @@
 {
-  "dependencies": {
-    "gatsby": "^1.9.247",
-    "gatsby-link": "^1.6.40",
-    "gatsby-plugin-google-fonts": "^0.0.4",
-    "gatsby-plugin-react-helmet": "^2.0.10",
-    "react-extras": "^0.6.0",
-    "react-helmet": "^5.2.0",
-    "sanitize.css": "^5.0.0",
-    "styled-components": "^3.2.6"
-  },
+  "dependencies": {},
   "scripts": {
-    "build": "gatsby build",
-    "start": "gatsby develop",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d dist"
+    "clean": "rimraf dist",
+    "build:eleventy": "eleventy",
+    "build:parcel": "parcel build src/assets/**/*.*",
+    "prebuild": "npm run clean",
+    "build": "run-p build:*",
+    "start:eleventy": "eleventy --serve",
+    "start:parcel": "parcel watch src/assets/**/*.*",
+    "prestart": "npm run clean",
+    "start": "run-p start:*"
   },
   "devDependencies": {
-    "gh-pages": "^1.1.0"
+    "@11ty/eleventy": "^0.10.0",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4",
+    "rimraf": "^3.0.2",
+    "sanitize.css": "^11.0.0"
   }
 }

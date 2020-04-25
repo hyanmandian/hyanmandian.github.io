@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header > .item {
+
+}
+
+.header > .menu {
+}
+
+.header > .menu > .item:not(:last-child) {
+  margin-right: 8px;
+}

@@ -1,19 +1,25 @@
 {
-  "dependencies": {},
   "scripts": {
-    "build": "eleventy",
-    "start": "eleventy --serve"
+    "build": "run-s build:*",
+    "build:site": "eleventy --config=.internals/eleventy.config.js",
+    "build:styles": "postcss src/assets/styles/index.css --output dist/styles/index.css --config .internals",
+    "build:scripts": "rollup --config .internals/rollup.config.js",
+    "start": "run-p start:*",
+    "start:site": "npm run build:site -- --serve",
+    "start:styles": "npm run build:styles -- --watch",
+    "start:scripts": "npm run build:scripts -- --watch"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "@fullhuman/postcss-purgecss": "^2.1.2",
     "cssnano": "^4.1.10",
+    "glob": "^7.1.6",
     "html-minifier": "^4.0.0",
-    "postcss": "^7.0.27",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
     "postcss-normalize": "^9.0.0",
     "postcss-preset-env": "^6.7.0",
     "rollup": "^2.7.6"
-  },
-  "browserslist": "last 2 versions"
+  }
 }

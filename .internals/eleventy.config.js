@@ -1,7 +1,9 @@
 const htmlMinifier = require("html-minifier");
 
+const { src, dist } = require("./config");
+
 module.exports = function (config) {
-  config.addPassthroughCopy({ "src/assets/images": "images" });
+  config.addPassthroughCopy({ [`${src}/assets/images`]: "images" });
 
   config.addTransform("minify-html", function (content, outputPath) {
     if (!outputPath.endsWith(".html")) return content;
@@ -17,8 +19,8 @@ module.exports = function (config) {
 
   return {
     dir: {
-      input: "src",
-      output: "dist",
+      input: src,
+      output: dist,
       includes: "includes",
       layouts: "includes/layouts",
     },

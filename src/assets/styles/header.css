@@ -1,13 +1,13 @@
 .header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-}
-
-.header > .item {
-
-}
-
-.header > .menu {
+  padding: 0 20px;
+  position: fixed;
+  border-bottom: 1px solid white;
+  width: 100%;
+  top: 0;
+  height: var(--header-height);
 }
 
 .header > .menu > .item:not(:last-child) {

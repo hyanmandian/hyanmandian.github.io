@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
 
-@import "sanitize.css/sanitize.css";
+@import "sanitize.css";
 
 @import "./variables.css";
 @import "./header.css";
-@import "./footer.css";
+@import "./home.css";
 
 body {
-  color: #fff;
-  padding: 20px;
+  margin-top: calc(var(--header-height) * 2);
+  color: white;
+  font-size: var(--font-size-md);
   background: black;
-  font-family: "Inconsolata", monospace;
+  font-family: var(--font-family-base);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -39,11 +40,19 @@ a::after {
   left: -3px;
   bottom: -3px;
   right: -3px;
-  border: 1px solid #000;
+  border: 1px solid black;
 }
 
 a:focus,
 a:hover {
-  color: #000;
-  background: #fff;
+  color: black;
+  background: white;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+  max-width: 720px;
 }

@@ -1,3 +1,7 @@
 :root {
-
+  --font-family-base: "Inconsolata", monospace;
+  --font-size-md: 16px;
+  --font-size-lg: 24px;
+  --font-size-xlg: 50px;
+  --header-height: 65px;
 }

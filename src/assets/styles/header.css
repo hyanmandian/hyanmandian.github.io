@@ -1,15 +1,39 @@
 .header {
+  background: var(--secondary-color);
+  z-index: 1;
+  position: fixed;
+  border-bottom: 1px solid var(--primary-color);
+  width: 100%;
+  top: 0;
+  line-height: 1.1;
+}
+
+.header > .container {
+  height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
-  position: fixed;
-  border-bottom: 1px solid white;
-  width: 100%;
-  top: 0;
-  height: var(--header-height);
 }
 
-.header > .menu > .item:not(:last-child) {
-  margin-right: 8px;
+.header a:not([aria-hidden="false"]) {
+  padding: 0 5px;
+}
+
+.header [aria-hidden="false"] {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  z-index: -999;
+}
+
+.header [aria-hidden="false"]:focus {
+  width: auto;
+  height: auto;
+  overflow: inherit;
+  z-index: 1;
+}
+
+.header .menu > a:not(:last-child) {
+  margin-right: var(--baseline);
 }

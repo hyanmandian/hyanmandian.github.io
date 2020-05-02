@@ -1,0 +1,17 @@
+.footer {
+  margin-top: var(--header-height);
+}
+
+.footer > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer > p {
+  margin: 0;
+}
+
+.footer a:not(:last-child) {
+  margin-right: var(--baseline);
+}

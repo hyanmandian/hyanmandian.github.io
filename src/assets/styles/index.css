@@ -4,13 +4,14 @@
 
 @import "./variables.css";
 @import "./header.css";
+@import "./footer.css";
 @import "./home.css";
 
 body {
   margin-top: calc(var(--header-height) * 2);
-  color: white;
+  color: var(--primary-color);
   font-size: var(--font-size-md);
-  background: black;
+  background: var(--secondary-color);
   font-family: var(--font-family-base);
   -webkit-font-smoothing: antialiased;
 }
@@ -33,25 +34,15 @@ a::before {
   background: inherit;
 }
 
-a::after {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  bottom: -3px;
-  right: -3px;
-  border: 1px solid black;
-}
-
 a:focus,
 a:hover {
-  color: black;
-  background: white;
+  color: var(--secondary-color);
+  background: var(--primary-color);
 }
 
 .container {
   width: 100%;
-  padding: 0 20px;
+  padding: 0 calc(var(--baseline) * 2);
   margin: 0 auto;
   position: relative;
   max-width: 720px;

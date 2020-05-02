@@ -1,29 +1,29 @@
-.intro {
+.home section:not(:first-child) {
+  margin-top: calc(var(--baseline) * 5);
+}
+
+.home section h2 {
+  margin: 0;
+}
+
+.home .intro {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.intro h1 {
-  margin: 0 0 10px 0;
+.home .intro h1 {
+  margin: 0 0 var(--baseline) 0;
   font-size: var(--font-size-xlg);
   line-height: 1.1;
 }
 
-.intro p {
+.home .intro p {
   margin: 0;
   font-size: var(--font-size-lg);
 }
 
-.intro .content {
-  border: 4px solid white;
-  padding: 20px;
-}
-
-.intro .social {
-  margin-top: 20px;
-}
-
-.intro .social > .item:not(:last-child) {
-  margin-right: 5px;
+.home .intro .content {
+  border: 1px solid var(--primary-color);
+  padding: calc(var(--baseline) * 2);
 }

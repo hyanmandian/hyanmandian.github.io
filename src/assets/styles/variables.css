@@ -3,5 +3,8 @@
   --font-size-md: 16px;
   --font-size-lg: 24px;
   --font-size-xlg: 50px;
-  --header-height: 65px;
+  --header-height: 57px;
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --baseline: 8px;
 }

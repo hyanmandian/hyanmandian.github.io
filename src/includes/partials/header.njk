@@ -1,9 +1,13 @@
 <header class="header">
-  <a href="{{ '/' | url }}" class="item">/</a>
+  <div class="container">
+    <a tabindex="0" aria-hidden="false" href="#main">Skip to main content</a>
 
-  <nav class="menu">
-    <a href="{{ '/blog' | url }}" class="item">/blog</a>
-    <a href="{{ '/about' | url }}" class="item">/about</a>
-    <a href="{{ '/projects' | url }}" class="item">/projects</a>
-  </nav>
+    <a href="{{ '/' | url }}">/</a>
+
+    <nav class="menu">
+      <a href="{{ '/blog' | url }}">/blog</a>
+      <a href="{{ '/about' | url }}">/about</a>
+      <a href="{{ '/projects' | url }}">/projects</a>
+    </nav>
+  </div>
 </header>

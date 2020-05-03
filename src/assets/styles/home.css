@@ -27,3 +27,7 @@
   border: 1px solid var(--primary-color);
   padding: calc(var(--baseline) * 2);
 }
+
+.home .updates a {
+  display: block;
+}

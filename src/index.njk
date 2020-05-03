@@ -12,8 +12,15 @@ description: Dedicated and passionate brazilian software engineer who believes t
   </div>
 </section>
 
-<section>
+<section class="updates">
   <div class="container">
-    <h2>Latest posts</h2>
+    <h2>Latest updates</h2>
+
+    {% for post in collections.blog | head(-3) %}
+      <a href="{{ post.url | url }}">
+        <h3>{{post.data.title}}</h3> - <time datetime="{{ post.date | htmlDate }}">{{ post.date | humanDate }}</time>
+        <p>{{post.templateContent | truncate(100) | safe}}</p>
+      </a>
+    {% endfor %}
   </div>
 </section>

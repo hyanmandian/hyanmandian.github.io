@@ -1,5 +1,6 @@
 .footer {
   margin-top: var(--header-height);
+  padding-bottom: calc(var(--baseline) * 4);
 }
 
 .footer > .container {
@@ -8,10 +9,20 @@
   justify-content: space-between;
 }
 
-.footer > p {
+.footer p {
   margin: 0;
 }
 
 .footer a:not(:last-child) {
   margin-right: var(--baseline);
+}
+
+@media screen and (max-width: 768px) {
+  .footer > .container {
+    flex-direction: column;
+  }
+
+  .footer p {
+    margin-bottom: var(--baseline);
+  }
 }

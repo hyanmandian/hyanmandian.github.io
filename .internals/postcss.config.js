@@ -13,6 +13,7 @@ module.exports = {
     }),
     require("@fullhuman/postcss-purgecss")({
       content: glob.sync(path.resolve(dist, "**", "*.html")),
+      whitelist: ["theme-switcher"],
     }),
   ],
 };

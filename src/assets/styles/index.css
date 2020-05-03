@@ -7,13 +7,42 @@
 @import "./footer.css";
 @import "./home.css";
 
+html,
+html.-light {
+  --primary-color: var(--theme-light-primary-color);
+  --secondary-color: var(--theme-light-secondary-color);
+}
+
+html.-dark {
+  --primary-color: var(--theme-dark-primary-color);
+  --secondary-color: var(--theme-dark-secondary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --primary-color: var(--theme-dark-primary-color);
+    --secondary-color: var(--theme-dark-secondary-color);
+  }
+}
+
 body {
-  margin-top: calc(var(--header-height) * 2);
   color: var(--primary-color);
   font-size: var(--font-size-md);
+  margin-top: calc(var(--header-height) * 2);
   background: var(--secondary-color);
   font-family: var(--font-family-base);
   -webkit-font-smoothing: antialiased;
+}
+
+.theme-switcher {
+  color: var(--primary-color);
+  border: none;
+  outline: none;
+  padding: 1px;
+  position: relative;
+  font-size: 0;
+  background: var(--secondary-color);
+  margin-left: calc(var(--baseline) * 2);
 }
 
 a {
@@ -23,7 +52,8 @@ a {
   text-decoration: none;
 }
 
-a::before {
+a::before,
+.theme-switcher::before {
   top: -4px;
   left: -4px;
   right: -4px;
@@ -35,15 +65,17 @@ a::before {
 }
 
 a:focus,
-a:hover {
+a:hover,
+.theme-switcher:focus,
+.theme-switcher:hover {
   color: var(--secondary-color);
   background: var(--primary-color);
 }
 
 .container {
   width: 100%;
-  padding: 0 calc(var(--baseline) * 2);
   margin: 0 auto;
+  padding: 0 calc(var(--baseline) * 2);
   position: relative;
   max-width: 720px;
 }

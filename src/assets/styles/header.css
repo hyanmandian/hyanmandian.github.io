@@ -1,11 +1,11 @@
 .header {
-  background: var(--secondary-color);
+  top: 0;
+  width: 100%;
   z-index: 1;
   position: fixed;
-  border-bottom: 1px solid var(--primary-color);
-  width: 100%;
-  top: 0;
+  background: var(--secondary-color);
   line-height: 1.1;
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .header > .container {
@@ -15,25 +15,31 @@
   justify-content: space-between;
 }
 
-.header a:not([aria-hidden="false"]) {
-  padding: 0 5px;
-}
-
 .header [aria-hidden="false"] {
   width: 1px;
   height: 1px;
+  z-index: -999;
   overflow: hidden;
   position: absolute;
-  z-index: -999;
 }
 
 .header [aria-hidden="false"]:focus {
   width: auto;
   height: auto;
-  overflow: inherit;
   z-index: 1;
+  overflow: inherit;
+}
+
+.header [aria-hidden="false"] ~ a {
+  padding: 0 5px;
+}
+
+.header .menu {
+  flex: 1;
+  display: inline-flex;
+  justify-content: flex-end;
 }
 
 .header .menu > a:not(:last-child) {
-  margin-right: var(--baseline);
+  margin-right: calc(var(--baseline) * 2);
 }

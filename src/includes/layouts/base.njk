@@ -9,6 +9,27 @@
     <link href="{{ '/styles/index.css' | url }}" rel="stylesheet"/>
   </head>
   <body class="{{ (title or 'home') | slug }}">
+    <script>
+      const root = document.documentElement;
+      const preferredTheme = !!window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .matches
+          ? "dark"
+          : "light";
+
+      const theme = window
+        .localStorage
+        .getItem("theme") || preferredTheme;
+
+      root
+        .classList
+        .remove("-light", "-dark");
+
+      root
+        .classList
+        .add(`-${theme}`);
+    </script>
+
     {% include "partials/header.njk" %}
 
     <main id="main">

@@ -15,12 +15,10 @@
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@fullhuman/postcss-purgecss": "^2.1.2",
-    "@rollup/plugin-commonjs": "^11.1.0",
     "date-fns": "^2.12.0",
     "glob": "^7.1.6",
     "html-minifier": "^4.0.0",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
     "postcss-normalize": "^9.0.0",
     "postcss-preset-env": "^6.7.0",
@@ -29,9 +27,7 @@
     "rollup-plugin-alias": "^2.2.0",
     "rollup-plugin-postcss": "^3.1.1",
     "rollup-plugin-svg": "^2.0.0",
-    "rollup-plugin-terser": "^5.3.0"
-  },
-  "dependencies": {
+    "rollup-plugin-terser": "^5.3.0",
     "voca": "^1.4.0"
   }
 }

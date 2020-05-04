@@ -10,9 +10,10 @@ module.exports = {
   input: path.resolve(src, "assets", "scripts", "index.js"),
   output: {
     dir: path.resolve(dist, "assets"),
-    format: "iife",
+    format: "es",
     freeze: false,
     sourcemap: true,
+    chunkFileNames: "[name].[hash].js",
   },
   treeshake: {
     propertyReadSideEffects: false,

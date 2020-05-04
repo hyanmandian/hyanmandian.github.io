@@ -2,12 +2,12 @@
   <div class="container">
     <a tabindex="0" aria-hidden="false" href="#main">Skip to main content</a>
 
-    <a href="{{ '/' | url }}">/</a>
+    <a aria-label="Go to homepage" href="{{ '/' | url }}">/home</a>
 
     <nav class="menu">
-      <a href="{{ '/blog' | url }}">/blog</a>
-      <a href="{{ '/about' | url }}">/about</a>
-      <a href="{{ '/projects' | url }}">/projects</a>
+      <a aria-label="View blog page" href="{{ '/blog' | url }}">/blog</a>
+      <a aria-label="View about page" href="{{ '/about' | url }}">/about</a>
+      <a aria-label="View projects page" href="{{ '/projects' | url }}">/projects</a>
     </nav>
   </div>
 </header>

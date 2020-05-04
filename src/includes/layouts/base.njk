@@ -7,27 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="{{ '/assets/index.css' | url }}" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet"/>
   </head>
   <body class="{{ (title or 'home') | slug }}">
     <script>
       const root = document.documentElement;
-      const preferredTheme = !!window
-        .matchMedia('(prefers-color-scheme: dark)')
-        .matches
-          ? "dark"
-          : "light";
-
-      const theme = window
-        .localStorage
-        .getItem("theme") || preferredTheme;
-
-      root
-        .classList
-        .remove("-light", "-dark");
-
-      root
-        .classList
-        .add(`-${theme}`);
+      const preferredTheme = !!window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+      const theme = window.localStorage.getItem("theme") || preferredTheme;
+      root.classList.remove("-light", "-dark");
+      root.classList.add(`-${theme}`);
     </script>
 
     {% include "partials/header.njk" %}
@@ -38,6 +26,6 @@
 
     {% include "partials/footer.njk" %}
 
-    <script src="{{ '/assets/index.js' | url }}" defer="defer"></script>
+    <script src="{{ '/assets/index.js' | url }}" type="module"></script>
   </body>
 </html>

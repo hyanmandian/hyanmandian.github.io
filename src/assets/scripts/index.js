@@ -13,8 +13,8 @@ const defaultTheme = root.classList.contains("-light") ? "light" : "dark";
 const themeSwitcher = document.createElement("button");
 
 themeSwitcher.innerHTML = theme[defaultTheme].icon;
+themeSwitcher.setAttribute("aria-hidden", "true");
 themeSwitcher.setAttribute("title", theme[defaultTheme].label);
-themeSwitcher.setAttribute("aria-label", theme[defaultTheme].label);
 themeSwitcher.classList.add("theme-switcher");
 
 themeSwitcher.addEventListener("click", ({ currentTarget }) => {
@@ -24,7 +24,6 @@ themeSwitcher.addEventListener("click", ({ currentTarget }) => {
   root.classList.add(`-${nextTheme}`);
   currentTarget.innerHTML = theme[nextTheme].icon;
   currentTarget.setAttribute("title", theme[nextTheme].label);
-  currentTarget.setAttribute("aria-label", theme[nextTheme].label);
   window.localStorage.setItem("theme", nextTheme);
 });
 

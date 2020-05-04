@@ -1,11 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
-
 @import "sanitize.css";
 
 @import "./variables.css";
 @import "./header.css";
 @import "./footer.css";
 @import "./home.css";
+
+* {
+  outline-color: var(--primary-color);
+}
 
 html,
 html.-light {
@@ -34,6 +36,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+a {
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+}
+
 .theme-switcher {
   color: var(--primary-color);
   border: none;
@@ -42,12 +50,6 @@ body {
   font-size: 0;
   background: var(--secondary-color);
   margin-left: calc(var(--baseline) * 2);
-}
-
-a {
-  color: inherit;
-  position: relative;
-  text-decoration: none;
 }
 
 a::before,

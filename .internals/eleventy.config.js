@@ -1,7 +1,7 @@
 const rss = require("@11ty/eleventy-plugin-rss");
-const htmlMinifier = require("html-minifier");
-const dateFormat = require("date-fns/format");
 const voca = require("voca");
+const dateFormat = require("date-fns/format");
+const htmlMinifier = require("html-minifier");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const { src, dist } = require("./config");

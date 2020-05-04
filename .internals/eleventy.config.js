@@ -9,12 +9,12 @@ const { src, dist } = require("./config");
 module.exports = function (config) {
   config.addPlugin(rss);
   config.addPlugin(syntaxHighlight);
-  config.addPassthroughCopy({ [`${src}/assets/images`]: "images" });
+  config.addPassthroughCopy({ [`${src}/assets/images`]: "assets" });
   config.addFilter("head", function (data, n) {
     return n < 0 ? data.slice(n) : data.slice(0, n);
   });
   config.addFilter("humanDate", function (date) {
-    return dateFormat(date, "dd LLL yyyy");
+    return dateFormat(date, "dd LLLL, yyyy");
   });
   config.addFilter("htmlDate", function (date) {
     return dateFormat(date, "yyyy-LL-dd");
@@ -27,6 +27,8 @@ module.exports = function (config) {
 
     return htmlMinifier.minify(content, {
       useShortDoctype: true,
+      trimCustomFragments: true,
+      removeRedundantAttributes: true,
       removeComments: true,
       collapseWhitespace: true,
       minifyCSS: true,

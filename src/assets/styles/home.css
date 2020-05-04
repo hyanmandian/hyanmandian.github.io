@@ -1,15 +1,8 @@
-.home section:not(:first-child) {
-  margin-top: calc(var(--baseline) * 5);
-}
-
-.home section h2 {
-  margin: 0;
-}
-
 .home .intro {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: calc(var(--baseline) * 5);
 }
 
 .home .intro h1 {
@@ -23,11 +16,17 @@
   font-size: var(--font-size-lg);
 }
 
-.home .intro .content {
-  border: 1px solid var(--primary-color);
-  padding: calc(var(--baseline) * 2);
+.home .updates h2 {
+  margin: 0 0 calc(var(--baseline) * 2) 0;
+}
+
+.home .updates h3,
+.home .updates p {
+  margin: 0;
 }
 
 .home .updates a {
   display: block;
+  border: 1px solid;
+  padding: var(--baseline);
 }

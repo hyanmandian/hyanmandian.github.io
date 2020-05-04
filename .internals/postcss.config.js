@@ -5,7 +5,6 @@ const { dist } = require("./config");
 
 module.exports = {
   plugins: [
-    require("cssnano")(),
     require("postcss-import")(),
     require("postcss-normalize")(),
     require("postcss-preset-env")({

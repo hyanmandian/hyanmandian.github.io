@@ -37,8 +37,7 @@ body {
 .theme-switcher {
   color: var(--primary-color);
   border: none;
-  outline: none;
-  padding: 1px;
+  padding: 0.5px;
   position: relative;
   font-size: 0;
   background: var(--secondary-color);
@@ -47,7 +46,6 @@ body {
 
 a {
   color: inherit;
-  outline: none;
   position: relative;
   text-decoration: none;
 }
@@ -59,9 +57,8 @@ a::before,
   right: -4px;
   bottom: -4px;
   content: "";
-  z-index: -1;
   position: absolute;
-  background: inherit;
+  z-index: 1;
 }
 
 a:focus,

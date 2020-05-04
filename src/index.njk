@@ -5,10 +5,8 @@ description: Dedicated and passionate brazilian software engineer who believes t
 
 <section class="intro">
   <div class="container">
-    <div class="content">
-      <h1>Hello, <br/>I'm Hyan</h1>
-      <p>Dedicated and passionate brazilian software engineer who believes that the only way to learn is by sharing knowledge.</p>
-    </div>
+    <h1>Hello, <br/>I'm Hyan</h1>
+    <p>Dedicated and passionate brazilian software engineer who believes that the only way to learn is by sharing knowledge.</p>
   </div>
 </section>
 
@@ -17,10 +15,12 @@ description: Dedicated and passionate brazilian software engineer who believes t
     <h2>Latest updates</h2>
 
     {% for post in collections.blog | head(-3) %}
-      <a href="{{ post.url | url }}">
-        <h3>{{post.data.title}}</h3> - <time datetime="{{ post.date | htmlDate }}">{{ post.date | humanDate }}</time>
-        <p>{{post.templateContent | truncate(100) | safe}}</p>
-      </a>
+      <article>
+        <a href="{{ post.url | url }}">
+          <h3>{{post.data.title}}</h3>
+          <time datetime="{{ post.date | htmlDate }}">{{ post.date | humanDate }}</time>
+        </a>
+      </article>
     {% endfor %}
   </div>
 </section>

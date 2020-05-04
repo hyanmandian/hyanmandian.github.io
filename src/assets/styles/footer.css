@@ -9,12 +9,16 @@
   justify-content: space-between;
 }
 
+.footer .social {
+  display: inline-flex;
+}
+
 .footer p {
   margin: 0;
 }
 
 .footer a:not(:last-child) {
-  margin-right: var(--baseline);
+  margin-right: calc(var(--baseline) * 2);
 }
 
 @media screen and (max-width: 768px) {

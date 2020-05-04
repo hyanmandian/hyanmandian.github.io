@@ -15,7 +15,7 @@
   justify-content: space-between;
 }
 
-.header [aria-hidden="false"] {
+.header [tabindex="0"] {
   width: 1px;
   height: 1px;
   z-index: -999;
@@ -23,15 +23,11 @@
   position: absolute;
 }
 
-.header [aria-hidden="false"]:focus {
+.header [tabindex="0"]:focus {
   width: auto;
   height: auto;
   z-index: 1;
   overflow: inherit;
-}
-
-.header [aria-hidden="false"] ~ a {
-  padding: 0 5px;
 }
 
 .header .menu {

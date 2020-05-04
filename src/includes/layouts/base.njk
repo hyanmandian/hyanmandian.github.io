@@ -1,20 +1,19 @@
 <!doctype html>
-<html class="no-js" lang="{{ lang or 'en' }}">
+<html class="no-js" lang="{{ lang or 'en' }}" data-page="{{ (class or title or 'home') | slug }}">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
     <title>Hyan Mandian{{ ' | ' + title if title }}</title>
-    <meta name="description" content="{{ description }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="description" content="{{ description }}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="{{ '/assets/index.css' | url }}" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet"/>
   </head>
-  <body class="{{ (title or 'home') | slug }}">
+  <body>
     <script>
       const root = document.documentElement;
       const preferredTheme = !!window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
       const theme = window.localStorage.getItem("theme") || preferredTheme;
-      root.classList.remove("-light", "-dark");
+      root.classList.remove("-light", "-dark", "no-js");
       root.classList.add(`-${theme}`);
     </script>
 
@@ -26,6 +25,6 @@
 
     {% include "partials/footer.njk" %}
 
-    <script src="{{ '/assets/index.js' | url }}" type="module"></script>
+    <script src="{{ '/assets/index.js' | url }}" type="module" async="async" defer="defer"></script>
   </body>
 </html>

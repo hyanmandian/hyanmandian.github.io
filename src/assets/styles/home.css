@@ -1,31 +1,31 @@
-.home .intro {
+[data-page="home"] .intro {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: calc(var(--baseline) * 5);
 }
 
-.home .intro h1 {
+[data-page="home"] .intro h1 {
   margin: 0 0 var(--baseline) 0;
   font-size: var(--font-size-xlg);
   line-height: 1.1;
 }
 
-.home .intro p {
+[data-page="home"] .intro p {
   margin: 0;
   font-size: var(--font-size-lg);
 }
 
-.home .updates h2 {
+[data-page="home"] .updates h2 {
   margin: 0 0 calc(var(--baseline) * 2) 0;
 }
 
-.home .updates h3,
-.home .updates p {
+[data-page="home"] .updates h3,
+[data-page="home"] .updates p {
   margin: 0;
 }
 
-.home .updates a {
+[data-page="home"] .updates a {
   display: block;
   border: 1px solid;
   padding: var(--baseline);

@@ -28,3 +28,9 @@ themeSwitcher.addEventListener("click", ({ currentTarget }) => {
 });
 
 header.appendChild(themeSwitcher);
+
+switch (root.dataset.page) {
+  case "post": {
+    import("./post");
+  }
+}

@@ -9,6 +9,12 @@
   outline-color: var(--primary-color);
 }
 
+pre {
+  border: 1px solid;
+  padding: calc(var(--baseline) * 2);
+  overflow-x: scroll;
+}
+
 html,
 html.-light {
   --primary-color: var(--theme-light-primary-color);

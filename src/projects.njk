@@ -2,3 +2,15 @@
 title: Projects
 layout: base
 ---
+<section class="container">
+  <h1>Projects</h1>
+
+  {% for project in projects %}
+    <article>
+      <a href="{{ project.url | url }}">
+        <h2>{{project.name}}</h2>
+        <p>{{project.description}}</p>
+      </a>
+    </article>
+  {% endfor %}
+</section>

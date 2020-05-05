@@ -2,7 +2,7 @@
 <html class="no-js" lang="{{ lang or 'en' }}" data-page="{{ (class or title or 'home') | slug }}">
   <head>
     <meta charset="utf-8"/>
-    <title>Hyan Mandian{{ ' | ' + title if title }}</title>
+    <title>{{meta.name}}{{ ' | ' + title if title }}</title>
     <meta name="description" content="{{ description }}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="{{ '/assets/index.css' | url }}" rel="stylesheet"/>

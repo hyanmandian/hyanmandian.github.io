@@ -30,3 +30,7 @@
   border: 1px solid;
   padding: var(--baseline);
 }
+
+[data-page="home"] .updates article:not(:last-child) {
+  margin-bottom: var(--baseline);
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://github.com/brazilian-utils/brazilian-utils",
+    "name": "Brazilian Utils",
+    "description": "Utils library for specific Brazilian businesses"
+  },
+  {
+    "url": "https://github.com/hyanmandian/cra-template-hyan",
+    "name": "Create React App Template",
+    "description": "Just another boilerplate based create-react-app with many useful things"
+  },
+  {
+    "url": "https://github.com/hyanmandian/map-props-to-element",
+    "name": "Map props to element",
+    "description": "Simple React bridge for web components"
+  },
+  {
+    "url": "https://github.com/hyanmandian/wait-as-promised",
+    "name": "Wait as promised",
+    "description": "Easy way to wait for value changes"
+  }
+]

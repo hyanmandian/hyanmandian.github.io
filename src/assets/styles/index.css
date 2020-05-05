@@ -4,6 +4,7 @@
 @import "./header.css";
 @import "./footer.css";
 @import "./home.css";
+@import "./projects.css";
 
 * {
   outline-color: var(--primary-color);
@@ -44,6 +45,7 @@ body {
 
 a {
   color: inherit;
+  display: inline-block;
   position: relative;
   text-decoration: none;
 }

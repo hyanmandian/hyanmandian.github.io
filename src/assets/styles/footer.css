@@ -13,10 +13,6 @@
   display: inline-flex;
 }
 
-.footer p {
-  margin: 0;
-}
-
 .footer a:not(:last-child) {
   margin-right: calc(var(--baseline) * 2);
 }

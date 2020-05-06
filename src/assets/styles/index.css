@@ -4,17 +4,7 @@
 @import "./header.css";
 @import "./footer.css";
 @import "./home.css";
-@import "./projects.css";
-
-* {
-  outline-color: var(--primary-color);
-}
-
-pre {
-  border: 1px solid;
-  padding: calc(var(--baseline) * 2);
-  overflow-x: scroll;
-}
+@import "./post.css";
 
 html,
 html.-light {
@@ -34,49 +24,60 @@ html.-dark {
   }
 }
 
+* {
+  outline-color: var(--primary-color);
+}
+
+pre {
+  border: 1px solid;
+  padding: calc(var(--baseline) * 2);
+  overflow-x: scroll;
+  margin: 0 0 calc(var(--baseline) * 2) 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
 body {
   color: var(--primary-color);
   font-size: var(--font-size-md);
-  margin-top: calc(var(--header-height) * 2);
   background: var(--secondary-color);
   font-family: var(--font-family-base);
+  padding-top: var(--header-height);
   -webkit-font-smoothing: antialiased;
 }
 
-a {
-  color: inherit;
+a,
+.theme-switcher {
+  color: var(--secondary-color);
+  background: var(--primary-color);
   display: inline-block;
   position: relative;
   text-decoration: none;
+  padding: 4px;
+  margin: -4px;
+  outline: none;
 }
 
 .theme-switcher {
-  color: var(--primary-color);
   border: none;
-  padding: 0.5px;
-  position: relative;
+  margin: -4.5px;
+  padding: 4.5px;
   font-size: 0;
-  background: var(--secondary-color);
   margin-left: calc(var(--baseline) * 2);
-}
-
-a::before,
-.theme-switcher::before {
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
-  content: "";
-  position: absolute;
-  z-index: 1;
 }
 
 a:focus,
 a:hover,
 .theme-switcher:focus,
 .theme-switcher:hover {
-  color: var(--secondary-color);
-  background: var(--primary-color);
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  box-shadow: inset 0 0 0px 2px var(--primary-color);
 }
 
 .container {
@@ -85,4 +86,26 @@ a:hover,
   padding: 0 calc(var(--baseline) * 2);
   position: relative;
   max-width: 720px;
+}
+
+.hero {
+  padding: calc(var(--baseline) * 5) 0;
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  text-align: center;
+  margin-bottom: calc(var(--baseline) * 5);
+}
+
+.hero h1 {
+  font-size: var(--font-size-xlg);
+  line-height: 0.9;
+}
+
+.hero p {
+  font-size: var(--font-size-lg);
+}
+
+.hero p + h1,
+.hero h1 + p {
+  margin-top: calc(var(--baseline) * 2);
 }

@@ -2,7 +2,7 @@
 layout: base
 description: Dedicated and passionate software engineer who believes that the only way to learn is by sharing knowledge.
 ---
-<section class="intro">
+<section class="hero">
   <div class="container">
     <h1>Hello, <br/>I'm Hyan</h1>
     <p>Dedicated and passionate software engineer who believes that the only way to learn is by sharing knowledge.</p>
@@ -16,7 +16,7 @@ description: Dedicated and passionate software engineer who believes that the on
     {% for post in collections.blog | head(-3) %}
       <article>
         <a href="{{ post.url | url }}">
-          <h3>{{post.data.title}}</h3>
+          <h3>{{ post.data.title }}</h3>
           <time datetime="{{ post.date | htmlDate }}">{{ post.date | humanDate }}</time>
         </a>
       </article>

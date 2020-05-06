@@ -14,7 +14,7 @@ module.exports = function (config) {
     return n < 0 ? data.slice(n) : data.slice(0, n);
   });
   config.addFilter("humanDate", function (date) {
-    return dateFormat(date, "dd LLLL, yyyy");
+    return dateFormat(date, "LLLL dd, yyyy");
   });
   config.addFilter("htmlDate", function (date) {
     return dateFormat(date, "yyyy-LL-dd");

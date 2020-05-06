@@ -2,8 +2,17 @@
 class: post
 layout: base
 ---
-<div class="container">
-  <h1>{{ title }}</h1>
+<section class="hero">
+  <div class="container">
+    <p>
+      <time datetime="{{ page.date | htmlDate }}">{{ page.date | humanDate }}</time> -
+      4 min read
+    </p>
 
+    <h1>{{ title }}</h1>
+  </div>
+</section>
+
+<section class="container">
   {{ content | safe }}
-</div>
+</section>

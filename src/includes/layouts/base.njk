@@ -1,5 +1,6 @@
+{% set currentPage = (class or title or "home") | slug %}
 <!doctype html>
-<html class="no-js" lang="{{ lang or 'en' }}" data-page="{{ (class or title or 'home') | slug }}">
+<html class="no-js" lang="{{ lang or 'en' }}" data-page="{{ currentPage }}">
   <head>
     <meta charset="utf-8"/>
     <title>{{meta.name}}{{ ' | ' + title if title }}</title>
